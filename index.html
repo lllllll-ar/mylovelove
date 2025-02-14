@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: url('bg3.jpg') no-repeat center center/cover;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yesBtn {
+            background-color: pink;
+            color: white;
+        }
+        #noBtn {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1> Do You Love Me, mas aby? ❤️</h1>
+    <div class="buttons">
+        <button id="yesBtn" onclick="goToVideoPage()">Yes</button>
+        <button id="noBtn" onclick="moveNoButton()">No</button>
+    </div>
+
+    <script>
+        function goToVideoPage() {
+            window.location.href = "video.html";
+        }
+
+        function moveNoButton() {
+            let noBtn = document.getElementById("noBtn");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noBtn.style.position = "absolute";
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
